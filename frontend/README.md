@@ -1,12 +1,25 @@
-# React + Vite
+**Cyber Defense Lab Frontend** is a Vite-powered React application that connects securely to the Flask backend to enable Red/Blue team user interactions.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#### Stack:
+- **React (Vite)** for a fast SPA UI
+- **Fetch API** to communicate with Flask
+- **Role-based forms** for login/registration
+- (Coming Soon) Secure dashboards, attack simulation UI
 
-Currently, two official plugins are available:
+#### Components:
+- `LoginForm.jsx`: Simple username/password login with JWT token storage
+- `RegisterForm.jsx`: Allows user to choose team (red/blue) at registration
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#### Running Locally:
+```bash
+cd frontend
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+In Docker:
+```bash
+docker-compose up --build
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Make sure backend (`localhost:5000`) is up before using the frontend (`localhost:5173`).

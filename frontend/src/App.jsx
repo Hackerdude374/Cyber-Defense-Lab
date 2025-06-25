@@ -1,18 +1,14 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import LoginForm from "./components/LoginForm";
+import RegisterForm from "./components/RegisterForm";
 
 function App() {
-  const [message, setMessage] = useState('')
-
-  useEffect(() => {
-    fetch('http://localhost:5000/')
-      .then(res => res.json())
-      .then(data => setMessage(data.message))
-  }, [])
-
-  return <h1>{message || "Loading..."}</h1>
+  return (
+    <div>
+      <h1>Cyber Defense Lab</h1>
+      <RegisterForm />
+      <LoginForm />
+    </div>
+  );
 }
 
-export default App
+export default App;
